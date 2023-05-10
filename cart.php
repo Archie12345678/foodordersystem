@@ -131,24 +131,6 @@ $grand_total = 0;
 
 
 
-
-
-
-
-
-
-
-<!-- INCLUDING FOOTER -->
-<?php include 'components/footer.php';?>
-<!-- FOOTER ENDS -->
-
-
-
-
-
-
-
-
 <!-- CUSTOM JS FILE -->
 <script src="js/script.js"></script>
 

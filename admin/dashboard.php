@@ -19,6 +19,7 @@ if(!isset($admin_id)){
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" type="image/png" href="../admin.svg">
    <title>Admin Dashboard</title>
 
     <!-- FONT AWESOME LINK -->
@@ -49,13 +50,13 @@ if(!isset($admin_id)){
       <?php
          $total_completes = 0;
          $select_completes = $conn->prepare("SELECT * FROM `orders` WHERE payment_status = ?");
-         $select_completes->execute(['completed']);
+         $select_completes->execute(['paid']);
          while($fetch_completes = $select_completes->fetch(PDO::FETCH_ASSOC)){
             $total_completes += $fetch_completes['total_price'];
          }
       ?>
       <h3><span>₱</span><?= $total_completes; ?><span></span></h3>
-      <p>Completes Orders</p>
+      <p>Paid Orders</p>
       <a href="placed_orders.php" class="btn">View Orders</a>
    </div>
 

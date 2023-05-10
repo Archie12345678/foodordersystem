@@ -12,6 +12,7 @@ if(isset($_SESSION['user_id'])){
 // ELSE IT WILL SHOW
 }else{
    $user_id = '';
+   echo '<link rel="icon" type="image/png" href="icon.svg">';
    echo "<div style='background-color: #f8d7da; color: #721c24; padding: 10px; font-size:25px; text-align:center;'> <a href='login.php'>Login </a> first to see your receipt!</div>";
 };
 
@@ -25,6 +26,7 @@ if(isset($_SESSION['user_id'])){
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="icon" type="image/png" href="icon.svg">
+   <link rel="stylesheet" media="print" href="css/print.css">
    <title>Customer Receipt</title>
 
     <!-- FONT AWESOME LINK -->
