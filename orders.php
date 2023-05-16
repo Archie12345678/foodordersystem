@@ -37,7 +37,7 @@ if(isset($_SESSION['user_id'])){
    <link rel="stylesheet" href="css/style.css">
 
 </head>
-<body>
+<body style="background-color: #fff">
 
 <!-- CUSTOMER RECEIPT STARTS -->
 <section class="orders">
@@ -65,7 +65,11 @@ if(isset($_SESSION['user_id'])){
             <p style="color: red">Your orders : <span><?= $fetch_orders['total_products']; ?></span></p>
             <p style="color: red">Total price : <span>₱<?= $fetch_orders['total_price']; ?></span></p>
             <p style="color: red"> Payment status : <span style="color:<?php if($fetch_orders['payment_status'] == 'Pending'){ echo '#FC4F00'; }else{ echo 'green'; }; ?>"><?= $fetch_orders['payment_status']; ?></span> </p>
-            <button class="print-btn" onclick="window.print()">Print Receipt</button>
+            <?php 
+            if ($fetch_orders['payment_status'] == 'Paid'){
+                echo '<button class="print-btn" onclick="window.print()">Print Receipt</button>';
+            }
+            ?>
         </div>
         <?php
             }
