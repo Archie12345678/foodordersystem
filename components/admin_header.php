@@ -40,7 +40,7 @@ if(isset($message)){
             $fetch_profile = $select_profile->fetch(PDO::FETCH_ASSOC);
          ?>
          <p><?= $fetch_profile['name']; ?></p>
-         <a href="update_profile.php" class="btn">Update Profile</a>
+         <a href="update_profile.php" class="btn">Change Password</a>
          <a href="../components/admin_logout.php" class="delete-btn">Logout</a>
       </div>
 
